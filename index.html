@@ -25,7 +25,14 @@
        .linediv-r {
          border-left: 1px white solid;
        }
+      .carousel .item {
+      height: 500px;
       }
+      .carousel img {
+      width: auto;
+      height: 500px;
+      }
+     }
 
       /* Landscape phones and down */
       @media (max-width: 480px) { 
@@ -38,6 +45,38 @@
        .linediv-r {
          border-top: 1px white solid;
        }
+.carousel 
+      {
+      margin-left: -20px;
+      margin-right: -20px;
+      }
+      .carousel .container 
+      {
+
+      }
+      .carousel .item 
+      {
+      height: 300px;
+      }
+      .carousel img 
+      {
+      height: 300px;
+      }
+      .carousel-caption 
+      {
+      width: 65%;
+      padding: 0 70px;
+      margin-top: 100px;
+      }
+      .carousel-caption h1 
+      {
+      font-size: 20px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn 
+      {
+      font-size: 18px;
+      }
       }
 
       /* All form factors */
@@ -96,41 +135,76 @@
       }
       .footer a {
         color: #ccccff;
-=======
-    <link type="text/css" rel="stylesheet"
-    href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
-    <style type="text/css">
-      body {
-        padding-top: 20px;
-        padding-bottom: 40px;
       }
-      .container {
-        width: 960px;
+/* Carousel stuff */
+      .carousel 
+      {
+      margin-bottom: 60px;
       }
-      p.lead {
-        padding-top: 15px;
+
+      .carousel .container 
+      {
+      position: relative;
+      z-index: 9;
       }
-      .navigation, .pitch, .section1, .section2, .faq, .footer {
-        padding: 10px 0px 10px 0px;
+
+      .carousel-control 
+      {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
       }
-      .video, .thermometer, .order, .social {
-        border: 1px dotted;
-        text-aling: center;
+
+      .carousel .item 
+      {
+      height: 500px;
       }
-      .video {
-        /* Internal borders have 1 px width, this need to add 4 x 1 px to 120px */
-        height: 124px;
-        line-height: 124px;
+      .carousel img 
+      {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
       }
-      .thermometer, .order, .social {
-        /* line-height to vertically center: some url /*
-        height: 40px;
-        line-height: 40px;
+
+      .carousel-caption 
+      {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 10%;
+      margin-top: 150px;
       }
-      div.row {
-        border: 1px solid;
+      .carousel-caption h1,
+      .carousel-caption .lead 
+      {
+      margin: 0;
+      line-height: 1.25;
+      color: #fefefe;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
       }
+      .carousel-caption .btn 
+      {
+      margin-top: 10px;
+      }
+
+
     </style>
+<script>
+  function scrollTo(tag)
+  {
+  $('html,body').animate({scrollTop: $(tag)[0].offsetTop-100}, 1000);
+  }
+
+  $('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+  e.stopPropagation();
+  });
+  </script>
   </head>
   <body>
 
